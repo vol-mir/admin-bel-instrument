@@ -1,0 +1,18 @@
+{
+    "confirm_password": "Confirm Password",
+    "current_password": "Current Password",
+    "dashboard": "Dashboard",
+    "email": "Email",
+    "instrument_torg": "Instrument Torg",
+    "log_out": "Logout",
+    "name": "Name",
+    "new_password": "New Password",
+    "profile": "Profile",
+    "password": "Password",
+    "remember_me": "Remember Me",
+    "save": "Save",
+    "saved_successfully": "Saved successfully.",
+    "sign_in": "Sign In",
+    "update_password": "Update password",
+    "update_profile_and_email": "Update your account's profile information and email address."
+}

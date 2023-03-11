@@ -1,0 +1,18 @@
+{
+    "confirm_password": "Подтверждение пароля",
+    "current_password": "Текущий пароль",
+    "dashboard": "Приборная панель",
+    "email": "Электронная почта",
+    "instrument_torg": "Инструмент Торг",
+    "log_out": "Выйти",
+    "name": "Имя",
+    "new_password": "Новый пароль",
+    "password": "Пароль",
+    "profile": "Профиль",
+    "remember_me": "Запомнить меня",
+    "save": "Сохранить",
+    "saved_successfully": "Успешно сохранено.",
+    "sign_in": "Войти",
+    "update_profile_and_email": "Обновить информацию профиля вашей учетной записи и адрес электронной почты.",
+    "update_password": "Обновление пароля"
+}
