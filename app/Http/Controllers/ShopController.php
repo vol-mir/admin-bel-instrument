@@ -11,6 +11,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Symfony\Component\HttpFoundation\Response;
 use Yajra\DataTables\Facades\DataTables;
 
 class ShopController extends Controller
@@ -79,11 +80,10 @@ class ShopController extends Controller
         return redirect()->route('shops.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Shop $shop): void
+    public function destroy(Shop $shop): JsonResponse
     {
-        //
+        $shop->delete();
+
+        return new JsonResponse(null, Response::HTTP_NO_CONTENT);
     }
 }

@@ -5,6 +5,11 @@ try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
 
+    window.toastr = require('toastr');
+    window.toastr.options = {
+        'progressBar': true
+    };
+
     require('bootstrap');
     require('admin-lte');
 } catch (e) {

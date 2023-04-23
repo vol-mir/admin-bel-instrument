@@ -20,3 +20,8 @@ $('.select2').select2()
 $('.select2bs4').select2({
     theme: 'bootstrap4'
 })
+
+$(document).on('click', '.modal-delete-dialog', function () {
+    $('#btn-modal-delete').attr('data-confirm-delete-id', $(this).attr('data-id'));
+    $('#modal-delete').modal('show');
+});

@@ -51,6 +51,7 @@
                                 </tr>
                                 </tfoot>
                             </table>
+                            <!-- /.modal -->
                         </div>
                         <!-- /.card-body -->
                     </div>
@@ -64,3 +65,5 @@
     </section>
     <!-- /.content -->
 </x-app-layout>
+
+@include('components.modals.delete')
