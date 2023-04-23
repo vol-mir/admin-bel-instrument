@@ -8,34 +8,10 @@
 //@import '~bootstrap/scss/bootstrap';
 
 // AdminLTE
-@import '~admin-lte/dist/css/adminlte.css';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '~@fortawesome/fontawesome-free/scss/solid.scss';
-@import '~@fortawesome/fontawesome-free/scss/brands.scss';
-@import '~@fortawesome/fontawesome-free/scss/regular.scss';
-
-//.navbar-laravel {
-//    background-color: #fff;
-//    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-//}
-//.router-link-exact-active{
-//    background-color: #ff0505;
-//    color: #fff !important;
-//}
-//.admin{
-//    color:red;
-//    font-weight:bold;
-//    padding-left:10px;
-//}
-//.surveyor{
-//    color:blue;
-//    font-weight:bold;
-//    padding-left:10px;
-//}
-//
-//.user{
-//    color:green;
-//    font-weight:bold;
-//    padding-left:10px;
-//}
-//
+@import "~admin-lte/dist/css/adminlte.min.css";
+@import "~admin-lte/plugins/fontawesome-free/css/all.min.css";
+@import "~admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css";
+@import "~admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css";
+@import "~admin-lte/plugins/select2/css/select2.min.css";
+@import "~admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css";
+@import '~jquery-ui/themes/base/all.css';

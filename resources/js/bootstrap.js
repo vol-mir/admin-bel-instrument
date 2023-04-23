@@ -3,10 +3,13 @@ window._ = _;
 
 try {
     window.Popper = require('popper.js').default;
-    // window.$ = window.jQuery = require('jquery'); // not needed
+    window.$ = window.jQuery = require('jquery');
+
     require('bootstrap');
     require('admin-lte');
-} catch (e) { }
+} catch (e) {
+    console.log(e);
+}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -15,6 +18,7 @@ try {
  */
 
 import axios from 'axios';
+import * as path from "path";
 window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

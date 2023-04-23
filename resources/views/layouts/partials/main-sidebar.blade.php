@@ -21,6 +21,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                   <a href="{{ route('shops.index') }}" class="nav-link {{ (request()->is('shops')) ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-cogs"></i>
+                        <p>
+                            {{ __('shops') }}
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

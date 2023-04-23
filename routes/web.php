@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -22,4 +23,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::post('logout', [AuthController::class, 'destroy'])->name('logout');
     Route::put('password', [AuthController::class, 'updatePassword'])->name('password.update');
+
+    Route::resource('shops', ShopController::class);
 });

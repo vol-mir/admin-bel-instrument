@@ -13,6 +13,12 @@
     "save": "Save",
     "saved_successfully": "Saved successfully.",
     "sign_in": "Sign In",
+    "shops": "Shops",
+    "shop": "Shop",
+    "name": "Name",
+    "registration_number": "Registration number",
+    "add": "Add",
+    "edit": "Edit",
     "update_password": "Update password",
     "update_profile_and_email": "Update your account's profile information and email address."
 }
