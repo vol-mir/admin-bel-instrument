@@ -16,6 +16,18 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('registration_number')->unique();
             $table->json('physical_address');
+
+            $table->string('telegram')->nullable();
+            $table->string('viber')->nullable();
+            $table->string('vk')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('ok')->nullable();
+            $table->string('youtube')->nullable();
+
+            $table->text('description')->nullable();
+            $table->text('keys')->nullable();
+
             $table->timestamps();
         });
     }

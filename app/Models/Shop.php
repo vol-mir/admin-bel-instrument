@@ -32,6 +32,26 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Shop whereSlug($value)
  * @method static Builder|Shop whereUpdatedAt($value)
  *
+ * @property string|null $telegram
+ * @property string|null $viber
+ * @property string|null $vk
+ * @property string|null $instagram
+ * @property string|null $facebook
+ * @property string|null $ok
+ * @property string|null $youtube
+ * @property string|null $description
+ * @property string|null $keys
+ *
+ * @method static Builder|Shop whereDescription($value)
+ * @method static Builder|Shop whereFacebook($value)
+ * @method static Builder|Shop whereInstagram($value)
+ * @method static Builder|Shop whereKeys($value)
+ * @method static Builder|Shop whereOk($value)
+ * @method static Builder|Shop whereTelegram($value)
+ * @method static Builder|Shop whereViber($value)
+ * @method static Builder|Shop whereVk($value)
+ * @method static Builder|Shop whereYoutube($value)
+ *
  * @mixin Eloquent
  */
 class Shop extends Model
@@ -46,5 +66,14 @@ class Shop extends Model
         'slug',
         'registration_number',
         'physical_address',
+        'telegram',
+        'viber',
+        'vk',
+        'instagram',
+        'facebook',
+        'ok',
+        'youtube',
+        'description',
+        'keys',
     ];
 }

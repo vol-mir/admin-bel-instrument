@@ -4,13 +4,18 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Actions\Shop\StoreAction;
+use App\Actions\Shop\UpdateAction;
+use App\Dto\Shop\IndexDto;
+use App\Http\Requests\Shop\StoreRequest;
+use App\Http\Requests\Shop\UpdateRequest;
 use App\Models\Shop;
 use Exception;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use Spatie\DataTransferObject\Exceptions\UnknownProperties;
 use Symfony\Component\HttpFoundation\Response;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -35,17 +40,17 @@ class ShopController extends Controller
         return view('shop.create');
     }
 
-    public function store(Request $request): RedirectResponse
+    /**
+     * @throws UnknownProperties
+     */
+    public function store(StoreRequest $request, StoreAction $storeAction): RedirectResponse
     {
-        $validated = $request->validate([
-            'name' => 'required|max:255',
-            'registration_number' => 'required|max:255|unique:shops',
-        ]);
+        $dto = new IndexDto($request->validated());
+        $storeAction->run($dto);
 
-        Shop::create(array_merge($validated, [
-            'slug' => Str::slug($request->input('name')),
-            'physical_address' => '{}',
-        ]));
+        if ($request->input('save') === 'save-next') {
+            return redirect()->route('shops.create');
+        }
 
         return redirect()->route('shops.index');
     }
@@ -62,20 +67,17 @@ class ShopController extends Controller
     {
         return view('shop.edit', [
             'shop' => $shop,
+            'physical_address' => json_decode($shop->physical_address),
         ]);
     }
 
-    public function update(Request $request, Shop $shop): RedirectResponse
+    /**
+     * @throws UnknownProperties
+     */
+    public function update(UpdateRequest $request, Shop $shop, UpdateAction $updateAction): RedirectResponse
     {
-        $validated = $request->validate([
-            'name' => 'required|max:255',
-            'registration_number' => 'required|max:255|unique:shops,registration_number,'.$shop->id,
-        ]);
-
-        $shop->update(array_merge($validated, [
-            'slug' => Str::slug($request->input('name')),
-            'physical_address' => '{}',
-        ]));
+        $dto = new IndexDto($request->validated());
+        $updateAction->run($dto, $shop);
 
         return redirect()->route('shops.index');
     }

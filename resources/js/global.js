@@ -25,3 +25,9 @@ $(document).on('click', '.modal-delete-dialog', function () {
     $('#btn-modal-delete').attr('data-confirm-delete-id', $(this).attr('data-id'));
     $('#modal-delete').modal('show');
 });
+
+$(document).on('click', '.js-nav-tabs', function (e) {
+    let selectedTabId = e.target.id;
+    let tabs = $(this).attr('data-tabs')
+    localStorage.setItem(tabs, selectedTabId);
+});

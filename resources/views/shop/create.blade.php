@@ -34,7 +34,8 @@
 
                         </div>
                         <div class="card-footer">
-                            <x-primary-button>{{ __('save') }}</x-primary-button>
+                            <x-primary-button name="save" value="save">{{ __('save') }}</x-primary-button>
+                            <x-primary-button name="save" value="save-next">{{ __('save_next') }}</x-primary-button>
                         </div>
                     </form>
                 </div>

@@ -1,6 +1,7 @@
 import Lang from 'laravel-localization';
 import route from './route';
 import toastr from 'toastr';
+import $ from "jquery";
 
 let table = $('#datatable-shops').DataTable({
     order: [[1, 'asc']],
@@ -43,3 +44,12 @@ $(document).on('click', '#btn-modal-delete', function () {
     $('#btn-modal-delete').attr('data-confirm-delete-id', null);
     $('#modal-delete').modal('hide');
 });
+
+if ($('#tabs-shop').length) {
+    let tabsShop = localStorage.getItem('tabs-shop');
+    if (tabsShop) {
+        $('#' + tabsShop).tab('show');
+    } else {
+        $('#tabs-shop-general').tab('show');
+    }
+}
