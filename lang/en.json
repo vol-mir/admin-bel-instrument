@@ -41,5 +41,6 @@
     "seo_data": "Data to SEO",
     "description": "Description",
     "keys": "Keys",
-    "basic": "Basic"
+    "basic": "Basic",
+    "settings": "Settings"
 }

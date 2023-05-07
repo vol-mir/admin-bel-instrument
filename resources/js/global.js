@@ -31,3 +31,12 @@ $(document).on('click', '.js-nav-tabs', function (e) {
     let tabs = $(this).attr('data-tabs')
     localStorage.setItem(tabs, selectedTabId);
 });
+
+if ($('#tabs-setting').length) {
+    let tabSetting = localStorage.getItem('tabs-setting');
+    if (tabSetting) {
+        $('#' + tabSetting).tab('show');
+    } else {
+        $('#tabs-setting-general').tab('show');
+    }
+}
