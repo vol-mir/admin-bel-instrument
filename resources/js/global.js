@@ -1,5 +1,6 @@
 import lang from '../json/dataTables.ru.lang.json';
 import $ from "jquery";
+import * as helper from "./helper";
 
 $.extend(true, $.fn.dataTable.defaults, {
     processing: true,
@@ -21,11 +22,9 @@ $('.select2bs4').select2({
     theme: 'bootstrap4'
 })
 
-$(document).on('click', '.modal-delete-dialog', function () {
-    $('#btn-modal-delete').attr('data-confirm-delete-id', $(this).attr('data-id'));
-    $('#modal-delete').modal('show');
-});
-
+/**
+ * Tabs
+ */
 $(document).on('click', '.js-nav-tabs', function (e) {
     let selectedTabId = e.target.id;
     let tabs = $(this).attr('data-tabs')
@@ -38,5 +37,14 @@ if ($('#tabs-setting').length) {
         $('#' + tabSetting).tab('show');
     } else {
         $('#tabs-setting-general').tab('show');
+    }
+}
+
+if ($('#tabs-shop').length) {
+    let tabsShop = localStorage.getItem('tabs-shop');
+    if (tabsShop) {
+        $('#' + tabsShop).tab('show');
+    } else {
+        $('#tabs-shop-general').tab('show');
     }
 }

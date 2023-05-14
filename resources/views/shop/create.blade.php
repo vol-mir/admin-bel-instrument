@@ -25,19 +25,24 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card card-default">
-                    <form method="post" action="{{ route('shops.store') }}">
-                        <div class="card-body">
-                            @csrf
-                            @method('post')
+                    <div clas="card-body">
+                        <form method="post" action="{{ route('shops.store') }}">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12">
+                                        @csrf
+                                        @method('post')
 
-                            @include('shop.partials.shop-form')
-
-                        </div>
-                        <div class="card-footer">
-                            <x-primary-button name="save" value="save">{{ __('save') }}</x-primary-button>
-                            <x-primary-button name="save" value="save-next">{{ __('save_next') }}</x-primary-button>
-                        </div>
-                    </form>
+                                        @include('shop.partials.shop-base-form')
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <x-primary-button name="save" value="save">{{ __('save') }}</x-primary-button>
+                                <x-primary-button name="save" value="save-next">{{ __('save_next') }}</x-primary-button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

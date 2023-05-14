@@ -18,8 +18,8 @@ class UpdateRequest extends FormRequest
         $shop = $this->route('shop');
 
         return [
-            'name' => ['required', 'string', 'max:255'],
-            'registration_number' => ['required', 'max:255', 'unique:shops,registration_number,'.$shop->id],
+            'name' => ['nullable', 'string', 'max:255'],
+            'registration_number' => ['nullable', 'max:255', 'unique:shops,registration_number,'.$shop->id],
             'physical_address' => ['nullable', 'array'],
             'physical_address[zip_code]' => ['nullable', 'string', 'max:25'],
             'physical_address[city]' => ['nullable', 'string', 'max:255'],

@@ -1,4 +1,4 @@
-<div class="modal fade" id="modal-delete">
+<div class="modal fade" id="js-modal-delete-{{ $object }}">
     <div class="modal-dialog">
         <div class="modal-content bg-danger">
             <div class="modal-header">
@@ -12,7 +12,7 @@
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-outline-light" data-dismiss="modal">{{ __('cancel') }}</button>
-                <button type="button" id="btn-modal-delete" class="btn btn-outline-light">{{ __('delete') }}</button>
+                <button type="button" id="js-btn-modal-delete-{{ $object }}" class="btn btn-outline-light">{{ __('delete') }}</button>
             </div>
         </div>
         <!-- /.modal-content -->

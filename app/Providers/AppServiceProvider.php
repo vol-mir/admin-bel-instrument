@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use App\Models\Setting;
+use Exception;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        view()->share('settings', Setting::where('slug', 'base')->first());
+        try {
+            view()->share('settings', Setting::where('slug', 'base')->firstOrFail());
+        } catch (Exception $e) {
+            // Not found
+        }
     }
 }

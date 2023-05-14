@@ -42,5 +42,8 @@
     "description": "Description",
     "keys": "Keys",
     "basic": "Basic",
-    "settings": "Settings"
+    "settings": "Settings",
+    "phone": "Phone",
+    "phones": "Phones",
+    "operator": "Operator"
 }

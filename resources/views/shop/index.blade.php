@@ -52,7 +52,7 @@
                                 </tr>
                                 </tfoot>
                             </table>
-                            <!-- /.modal -->
+                            <!-- /.table -->
                         </div>
                         <!-- /.card-body -->
                     </div>
@@ -67,4 +67,4 @@
     <!-- /.content -->
 </x-app-layout>
 
-@include('components.modals.delete')
+@include('components.modals.delete', ['object' => 'shop'])

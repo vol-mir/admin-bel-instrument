@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PhoneController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ShopController;
@@ -29,4 +30,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/settings', [SettingController::class, 'edit'])->name('settings.edit');
     Route::put('/settings', [SettingController::class, 'update'])->name('settings.update');
+
+    Route::get('{type}/{id}/phones', [PhoneController::class, 'index'])->name('phones.index');
+    Route::get('{type}/{id}/phones/create', [PhoneController::class, 'create'])->name('phones.create');
+    Route::post('{type}/{id}/phones', [PhoneController::class, 'store'])->name('phones.store');
+    Route::get('{type}/{id}/phones/{phone}', [PhoneController::class, 'edit'])->name('phones.edit');
+    Route::put('{type}/{id}/phones/{phone}', [PhoneController::class, 'update'])->name('phones.update');
+    Route::delete('/phones/{phone}', [PhoneController::class, 'destroy'])->name('phones.destroy');
 });

@@ -25,18 +25,20 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card card-default">
-                    <form method="post" action="{{ route('settings.update') }}">
-                        <div class="card-body">
-                            @csrf
-                            @method('put')
+                    <div clas="card-body">
+                        <form method="post" action="{{ route('settings.update') }}">
+                            <div class="card-body">
+                                @csrf
+                                @method('put')
 
-                            @include('settings.partials.setting-form', ['setting' => $setting])
+                                @include('settings.partials.setting-form', ['setting' => $setting])
 
-                        </div>
-                        <div class="card-footer">
-                            <x-primary-button>{{ __('save') }}</x-primary-button>
-                        </div>
-                    </form>
+                            </div>
+                            <div class="card-footer">
+                                <x-primary-button>{{ __('save') }}</x-primary-button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

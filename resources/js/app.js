@@ -13,3 +13,4 @@ import'admin-lte/plugins/select2/js/select2.full.min.js';
 import './global';
 import './lang';
 import './shops';
+import './phones';

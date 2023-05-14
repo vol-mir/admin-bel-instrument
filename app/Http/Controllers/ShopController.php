@@ -46,13 +46,13 @@ class ShopController extends Controller
     public function store(StoreRequest $request, StoreAction $storeAction): RedirectResponse
     {
         $dto = new IndexDto($request->validated());
-        $storeAction->run($dto);
+        $shop = $storeAction->run($dto);
 
         if ($request->input('save') === 'save-next') {
             return redirect()->route('shops.create');
         }
 
-        return redirect()->route('shops.index');
+        return redirect()->route('shops.edit', ['shop' => $shop]);
     }
 
     /**
@@ -63,7 +63,10 @@ class ShopController extends Controller
         //
     }
 
-    public function edit(Shop $shop): View
+    /**
+     * @throws Exception
+     */
+    public function edit(Request $request, Shop $shop): View|array
     {
         return view('shop.edit', [
             'shop' => $shop,
@@ -77,9 +80,9 @@ class ShopController extends Controller
     public function update(UpdateRequest $request, Shop $shop, UpdateAction $updateAction): RedirectResponse
     {
         $dto = new IndexDto($request->validated());
-        $updateAction->run($dto, $shop);
+        $updateAction->run($dto, $request->keys(), $shop);
 
-        return redirect()->route('shops.index');
+        return redirect()->route('shops.edit', ['shop' => $shop]);
     }
 
     public function destroy(Shop $shop): JsonResponse
