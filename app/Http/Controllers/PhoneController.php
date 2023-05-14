@@ -36,6 +36,8 @@ class PhoneController extends Controller
 
             return Datatables::of($contact->phones)->addIndexColumn()->make();
         }
+
+        return new JsonResponse(null, Response::HTTP_NO_CONTENT);
     }
 
     public function create(string $type, int $id): View

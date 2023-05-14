@@ -12,6 +12,12 @@ class StoreAction
 {
     public function run(IndexDto $dto): Shop
     {
-        return Shop::create(array_merge($dto->toArray(), ['slug' => Str::slug($dto->name)]));
+        $data = $dto->toArray();
+
+        if ($dto->name) {
+            $data = array_merge($data, ['slug' => Str::slug($dto->name)]);
+        }
+
+        return Shop::create($data);
     }
 }

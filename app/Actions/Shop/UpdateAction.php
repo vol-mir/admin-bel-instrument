@@ -15,7 +15,7 @@ class UpdateAction
         $updateData = $dto->only(...$only)->toArray();
 
         $additionalData = [];
-        if (array_key_exists('name', $updateData)) {
+        if (array_key_exists('name', $updateData) && $dto->name) {
             $additionalData['slug'] = Str::slug($dto->name);
         }
 

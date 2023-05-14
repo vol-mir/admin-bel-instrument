@@ -35,6 +35,8 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Phone wherePhone($value)
  * @method static Builder|Phone whereUpdatedAt($value)
  *
+ * @property-read Model|Eloquent $contactable
+ *
  * @mixin Eloquent
  */
 class Phone extends Model
