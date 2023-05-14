@@ -14,7 +14,7 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['nullable', 'string', 'max:255'],
             'telegram' => ['nullable', 'url'],
             'viber' => ['nullable', 'url'],
             'vk' => ['nullable', 'url'],

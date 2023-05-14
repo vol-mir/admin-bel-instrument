@@ -31,7 +31,7 @@ class SettingController extends Controller
         $setting = Setting::where('slug', 'base')->firstOrFail();
 
         $dto = new IndexDto($request->validated());
-        $updateAction->run($dto, $setting);
+        $updateAction->run($dto, $request->keys(), $setting);
 
         return redirect()->route('settings.edit');
     }

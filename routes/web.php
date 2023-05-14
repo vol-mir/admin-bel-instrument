@@ -29,7 +29,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('shops', ShopController::class);
 
     Route::get('/settings', [SettingController::class, 'edit'])->name('settings.edit');
-    Route::put('/settings', [SettingController::class, 'update'])->name('settings.update');
+    Route::patch('/settings', [SettingController::class, 'update'])->name('settings.update');
 
     Route::get('{type}/{id}/phones', [PhoneController::class, 'index'])->name('phones.index');
     Route::get('{type}/{id}/phones/create', [PhoneController::class, 'create'])->name('phones.create');

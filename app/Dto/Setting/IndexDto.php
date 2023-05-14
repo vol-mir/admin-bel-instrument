@@ -8,7 +8,7 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class IndexDto extends DataTransferObject
 {
-    public string $name;
+    public ?string $name = null;
 
     public ?string $telegram = null;
 
