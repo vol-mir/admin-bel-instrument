@@ -14,8 +14,8 @@ let tableShopPhones = $('#datatable-shop-phones').DataTable({
             searchable: false,
         },
         {data: 'phone', name: 'phone'},
-        {data: 'operator', name: 'operator'},
         {data: 'name', name: 'name'},
+        {data: 'operator', name: 'operator'},
         {
             data: 'id',
             name: 'actions',
