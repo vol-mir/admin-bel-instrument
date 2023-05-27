@@ -20,9 +20,15 @@
 
         <div class="form-group">
             <x-input-label for="operator" :value="__('operator')"/>
-            <x-text-input id="operator" name="operator" type="text" placeholder="{{ __('operator') }}"
-                          :value="isset($phone) ? $phone->operator : old('operator')" autofocus
-                          autocomplete="name"/>
+            <select id="operator" name="operator" placeholder="{{ __('operator') }}" class="form-control select2bs4" style="width: 100%;">
+                @foreach ($operators as $key => $value)
+                    <option value="{{ $key }}"
+                        @if ($key == $phone->operator)
+                            selected="selected"
+                        @endif
+                    >{{ trans($value) }}</option>
+                @endforeach
+            </select>
             <x-input-error class="mt-2" :messages="$errors->get('operator')"/>
         </div>
 

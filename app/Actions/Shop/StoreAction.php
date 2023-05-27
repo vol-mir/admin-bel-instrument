@@ -18,6 +18,10 @@ class StoreAction
             $data = array_merge($data, ['slug' => Str::slug($dto->name)]);
         }
 
+        if ($dto->physical_address) {
+            $data['physical_address'] = json_encode($data['physical_address']);
+        }
+
         return Shop::create($data);
     }
 }

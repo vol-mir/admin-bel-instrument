@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Actions\Phone\StoreAction;
 use App\Actions\Phone\UpdateAction;
 use App\Dto\Phone\IndexDto;
+use App\Enums\MobileOperatorEnum;
 use App\Http\Requests\Phone\StoreRequest;
 use App\Http\Requests\Phone\UpdateRequest;
 use App\Models\Phone;
@@ -45,6 +46,7 @@ class PhoneController extends Controller
         return view('phone.create', [
             'contact' => $this->getContactTask->run($type, $id),
             'type' => $type,
+            'operators' => MobileOperatorEnum::toArray(),
         ]);
     }
 
@@ -78,6 +80,7 @@ class PhoneController extends Controller
             'contact' => $this->getContactTask->run($type, $id),
             'type' => $type,
             'phone' => $phone,
+            'operators' => MobileOperatorEnum::toArray(),
         ]);
     }
 

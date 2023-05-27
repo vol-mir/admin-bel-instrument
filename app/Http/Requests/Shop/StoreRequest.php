@@ -30,7 +30,7 @@ class StoreRequest extends FormRequest
             'ok' => ['nullable', 'url'],
             'youtube' => ['nullable', 'url'],
             'description' => ['nullable', 'string'],
-            'keys' => ['nullable', 'string', 'max:25'],
+            'keys' => ['nullable', 'string'],
         ];
     }
 }

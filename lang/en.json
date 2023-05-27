@@ -45,5 +45,8 @@
     "settings": "Settings",
     "phone": "Phone",
     "phones": "Phones",
-    "operator": "Operator"
+    "operator": "Operator",
+    "a1": "A1",
+    "mts": "MTS",
+    "life": "Life",
 }
