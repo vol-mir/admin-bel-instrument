@@ -10,5 +10,5 @@ class IndexDto extends DataTransferObject
 {
     public ?string $description = null;
 
-    public string $image;
+    public ?string $image = null;
 }

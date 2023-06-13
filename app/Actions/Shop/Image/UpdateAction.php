@@ -11,28 +11,37 @@ use Illuminate\Support\Str;
 
 class UpdateAction
 {
-    public function run(IndexDto $dto, ShopImage $image): ShopImage
+    public function run(IndexDto $dto, array $only, ShopImage $image): ShopImage
     {
-        $image->delete();
-        Storage::disk('public')->delete('images/shops/' . $image->shop?->slug . '/' . $image->name);
+        $updateData = $dto->only(...$only)->toArray();
 
-        $newImage = $dto->image;
-        $imageInfo = explode(';base64,', $newImage);
-        $imgExt = str_replace('data:image/', '', $imageInfo[0]);
-        $newImage = str_replace(' ', '+', $imageInfo[1]);
-        $imageName = Str::uuid() . '.' . $imgExt;
+        if (array_key_exists('image', $updateData) && !empty($updateData['image'])) {
+            $image->delete();
+            Storage::disk('public')->delete('images/shops/' . $image->shop?->slug . '/' . $image->name);
 
-        Storage::disk('public')->put(
-            'images/shops/' . $image->shop?->slug . '/' . $imageName,
-            base64_decode($newImage)
-        );
+            $newImage = $updateData['image'];
+            $imageInfo = explode(';base64,', $newImage);
+            $imgExt = str_replace('data:image/', '', $imageInfo[0]);
+            $newImage = str_replace(' ', '+', $imageInfo[1]);
+            $imageName = Str::uuid() . '.' . $imgExt;
 
-        $data = $dto->toArray();
-        $data = array_merge($data, [
-            'shop_id' => $image->shop?->id,
-            'name' => $imageName,
-        ]);
+            Storage::disk('public')->put(
+                'images/shops/' . $image->shop?->slug . '/' . $imageName,
+                base64_decode($newImage)
+            );
 
-        return ShopImage::create($data);
+            $updateData = array_merge($updateData, [
+                'shop_id' => $image->shop?->id,
+                'name' => $imageName,
+            ]);
+
+            return ShopImage::create($updateData);
+        }
+
+        if (array_key_exists('description', $updateData) && !empty($updateData['description'])) {
+            $image->update(['description' => $updateData['description']]);
+        }
+
+        return $image;
     }
 }

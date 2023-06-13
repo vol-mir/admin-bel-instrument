@@ -31,14 +31,14 @@
                                 <div class="row">
                                     <div class="col-12 col-sm-12">
                                         @csrf
-                                        @method('put')
+                                        @method('patch')
 
                                         @include('shop.image.partials.base-form')
                                     </div>
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <x-primary-button name="save" class="js-crop-image" value="save" disabled>{{ __('save') }}</x-primary-button>
+                                <x-primary-button name="save" class="js-crop-image" value="save">{{ __('save') }}</x-primary-button>
                             </div>
                         </form>
                     </div>

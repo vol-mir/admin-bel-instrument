@@ -38,8 +38,8 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <x-primary-button name="save" class="js-crop-image" value="save" disabled>{{ __('save') }}</x-primary-button>
-                                <x-primary-button name="save" class="js-crop-image" value="save-next" disabled>{{ __('save_next') }}</x-primary-button>
+                                <x-primary-button name="save" class="js-crop-image" value="save">{{ __('save') }}</x-primary-button>
+                                <x-primary-button name="save" class="js-crop-image" value="save-next">{{ __('save_next') }}</x-primary-button>
                             </div>
                         </form>
                     </div>

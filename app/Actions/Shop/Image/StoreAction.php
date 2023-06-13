@@ -7,6 +7,7 @@ namespace App\Actions\Shop\Image;
 use App\Dto\Shop\Image\IndexDto;
 use App\Models\Shop;
 use App\Models\ShopImage;
+use Exception;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -14,6 +15,10 @@ class StoreAction
 {
     public function run(IndexDto $dto, Shop $shop): ShopImage
     {
+        if (empty($dto->image)) {
+            throw new Exception('Image not found');
+        }
+
         $newImage = $dto->image;
         $imageInfo = explode(';base64,', $newImage);
         $imgExt = str_replace('data:image/', '', $imageInfo[0]);

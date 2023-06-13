@@ -43,6 +43,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('shops/{shop}/images/create', [ShopImageController::class, 'create'])->name('shops.images.create');
     Route::post('shops/{shop}/images', [ShopImageController::class, 'store'])->name('shops.images.store');
     Route::get('shops/{shop}/images/{image}', [ShopImageController::class, 'edit'])->name('shops.images.edit');
-    Route::put('shops/{shop}/images/{image}', [ShopImageController::class, 'update'])->name('shops.images.update');
+    Route::patch('shops/{shop}/images/{image}', [ShopImageController::class, 'update'])->name('shops.images.update');
     Route::delete('shops/images/{image}', [ShopImageController::class, 'destroy'])->name('shops.images.destroy');
 });

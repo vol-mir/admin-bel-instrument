@@ -83,7 +83,7 @@ class ShopImageController extends Controller
         UpdateAction $updateAction
     ): RedirectResponse {
         $dto = new IndexDto($request->validated());
-        $updateAction->run($dto, $image);
+        $updateAction->run($dto, $request->keys(), $image);
 
         return redirect()->route('shops.edit', ['shop' => $shop]);
     }

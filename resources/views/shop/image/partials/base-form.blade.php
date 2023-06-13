@@ -20,11 +20,11 @@
     </div>
 </div>
 
-<div class="form-group cropper-container">
-    <div class="row">
-        <div class="col-md-8" id="js-cropper-shop-container">
+<div class="form-group cropper-container cropper-height">
+    <div class="row cropper-height">
+        <div class="col-md-8 cropper-height" id="js-cropper-shop-container">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 cropper-height">
             <div class="cropper-preview"></div>
             <x-textarea-input class="d-none" id="js-image" name="image"/>
             <x-input-error class="mt-2" :messages="$errors->get('image')"/>

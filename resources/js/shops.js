@@ -105,10 +105,10 @@ $(document).on('change', '#js-input-shop-image', function () {
         helper.cropper.destroy();
         $('#js-cropper-shop-image').remove();
         $('#js-cropper-shop-container').html('');
-        $('.js-crop-image').prop('disabled', 'disabled');
+        $('.cropper-height').css('height', 0);
     }
 
-    $('.cropper-container').css('height', 'auto');
+    $('.cropper-height').css('height', 'auto');
     if (this.files && this.files[0]) {
         let reader = new FileReader();
         reader.onload = function (e) {
@@ -124,7 +124,8 @@ $(document).on('change', '#js-input-shop-image', function () {
 });
 
 $(document).on('click', '#js-cropper-shop-container', function () {
-    let imgSrc = helper.cropper.getCroppedCanvas().toDataURL();
-    $('#js-image').val(imgSrc);
-    $('.js-crop-image').removeAttr('disabled');
+    if (helper.cropper) {
+        let imgSrc = helper.cropper.getCroppedCanvas().toDataURL();
+        $('#js-image').val(imgSrc);
+    }
 });
