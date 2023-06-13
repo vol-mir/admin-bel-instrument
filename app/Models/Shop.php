@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Carbon;
 
@@ -56,6 +57,8 @@ use Illuminate\Support\Carbon;
  *
  * @property-read Collection<int, Phone> $phones
  * @property-read int|null $phones_count
+ * @property-read Collection<int, ShopImage> $images
+ * @property-read int|null $images_count
  *
  * @mixin Eloquent
  */
@@ -85,5 +88,10 @@ class Shop extends Model
     public function phones(): MorphMany
     {
         return $this->morphMany(Phone::class, 'contactable');
+    }
+
+    public function images(): HasMany
+    {
+        return $this->hasMany(ShopImage::class);
     }
 }

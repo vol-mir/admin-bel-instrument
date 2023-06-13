@@ -104,6 +104,37 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="tab-pane fade" id="tabs-shop-images-tab" role="tabpanel" aria-labelledby="tabs-shop-images">
+                                        <div class="card card-default shadow-none">
+                                            <div class="card-header">
+                                                <a href="{{ route('shops.images.create', ['shop' => $shop->id]) }}"
+                                                   class="edit btn btn-success btn-sm">{{ __('add') }}</a>
+                                            </div>
+                                            <div class="card-body">
+                                                <table id="datatable-shop-images" data-shop-id="{{ $shop->id }}" class="table table-bordered table-striped table-sm">
+                                                    <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th>{{ __('description') }}</th>
+                                                        <th></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th>{{ __('description') }}</th>
+                                                        <th></th>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                                <!-- /.table -->
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-2 col-sm-2 pl-0">
@@ -128,6 +159,10 @@
                                        data-toggle="pill"
                                        href="#tabs-shop-phones-tab" role="tab" aria-controls="tabs-shop-phones-tab"
                                        aria-selected="false">{{ __('phones') }}</a>
+                                    <a class="nav-link js-nav-tabs" id="tabs-shop-images" data-tabs="tabs-shop"
+                                       data-toggle="pill"
+                                       href="#tabs-shop-images-tab" role="tab" aria-controls="tabs-shop-images-tab"
+                                       aria-selected="false">{{ __('images') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -140,3 +175,4 @@
 </x-app-layout>
 
 @include('components.modals.delete', ['object' => 'phone'])
+@include('components.modals.delete', ['object' => 'shop-image'])

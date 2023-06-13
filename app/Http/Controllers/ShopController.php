@@ -60,7 +60,6 @@ class ShopController extends Controller
      */
     public function show(Shop $shop): void
     {
-        //
     }
 
     /**

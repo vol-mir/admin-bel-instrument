@@ -1,5 +1,5 @@
 import lang from '../json/dataTables.ru.lang.json';
-import $ from "jquery";
+import $ from 'jquery';
 import * as helper from "./helper";
 
 $.extend(true, $.fn.dataTable.defaults, {

@@ -66,7 +66,7 @@ class PhoneController extends Controller
             ]);
         }
 
-        return redirect()->route($type.'.edit', [
+        return redirect()->route($type . '.edit', [
             rtrim($type, 's') => $contact,
         ]);
     }
@@ -93,7 +93,7 @@ class PhoneController extends Controller
         $contact = $this->getContactTask->run($type, $id);
         $updateAction->run($dto, $phone);
 
-        return redirect()->route($type.'.edit', [
+        return redirect()->route($type . '.edit', [
             rtrim($type, 's') => $contact,
         ]);
     }

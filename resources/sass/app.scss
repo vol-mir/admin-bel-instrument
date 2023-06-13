@@ -18,3 +18,30 @@
 @import "~admin-lte/plugins/select2/css/select2.min.css";
 @import "~admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css";
 @import '~jquery-ui/themes/base/all.css';
+
+// Cropper
+@import "~cropperjs/dist/cropper.min.css";
+.cropper-img {
+    display: block;
+    width: 500px;
+    height: 600px;
+    max-width: 100%;
+}
+.cropper-preview {
+    text-align: center;
+    overflow: hidden;
+    width: auto;
+    height: 310px;
+    margin: 10px;
+}
+.cropper-container {
+    height: 0;
+}
+
+.img-size-220 {
+    height: auto;
+}
+
+.img-size-220 {
+    width: 220px;
+}

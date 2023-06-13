@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import toastr from 'toastr';
 import Lang from 'laravel-localization';
+import Cropper from "cropperjs";
 
 export function deleteEntity(url, table) {
     $.ajax({
@@ -15,3 +16,20 @@ export function deleteEntity(url, table) {
         toastr.error(Lang.get('delete_message_error'));
     });
 }
+
+/**
+ * Cropper
+ */
+export let cropper = null;
+export function initCropper(image) {
+    cropper = new Cropper(image, {
+        aspectRatio: 16 / 9,
+        viewMode: 3,
+        preview: '.cropper-preview'
+    });
+}
+
+/**
+ * Path images
+ */
+export let pathImageShops = '/storage/images/shops/';

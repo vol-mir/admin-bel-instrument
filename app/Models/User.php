@@ -46,14 +46,13 @@ use Laravel\Sanctum\PersonalAccessToken;
  * @method static Builder|User whereRememberToken($value)
  * @method static Builder|User whereUpdatedAt($value)
  *
- * @property-read DatabaseNotificationCollection<int, DatabaseNotification> $notifications
- * @property-read Collection<int, PersonalAccessToken> $tokens
- *
  * @mixin Eloquent
  */
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens;
+    use HasFactory;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.

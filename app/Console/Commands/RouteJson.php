@@ -40,9 +40,9 @@ class RouteJson extends Command
                 continue;
             }
             if (isset($routes[$route->getName()])) {
-                $this->comment('Overwriting duplicate named route: '.$route->getName());
+                $this->comment('Overwriting duplicate named route: ' . $route->getName());
             }
-            $routes[$route->getName()] = '/'.$route->uri();
+            $routes[$route->getName()] = '/' . $route->uri();
         }
 
         return $routes;
@@ -52,7 +52,7 @@ class RouteJson extends Command
     {
         $filename = 'resources/json/routes.json';
 
-        if (! $handle = fopen($filename, 'w')) {
+        if (!$handle = fopen($filename, 'w')) {
             $this->error("Cannot open file: $filename");
 
             return;
