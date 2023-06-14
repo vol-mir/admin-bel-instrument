@@ -15,7 +15,13 @@ let tableShopPhones = $('#datatable-shop-phones').DataTable({
         },
         {data: 'phone', name: 'phone'},
         {data: 'name', name: 'name'},
-        {data: 'operator', name: 'operator'},
+        {
+            data: 'operator',
+            name: 'operator',
+            "render": function ( data, type, row, meta ) {
+                return Lang.get(row.operator);
+            }
+        },
         {
             data: 'id',
             name: 'actions',

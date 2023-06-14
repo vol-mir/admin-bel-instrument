@@ -10,6 +10,7 @@ use Spatie\Enum\Enum;
  * @method static self mts()
  * @method static self a1()
  * @method static self life()
+ * @method static self city()
  */
 class MobileOperatorEnum extends Enum
 {
@@ -22,6 +23,7 @@ class MobileOperatorEnum extends Enum
             'mts' => 'mts',
             'a1' => 'a1',
             'life' => 'life',
+            'city' => 'city',
         ];
     }
 }

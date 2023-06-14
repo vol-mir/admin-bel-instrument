@@ -23,7 +23,7 @@
             <select id="operator" name="operator" placeholder="{{ __('operator') }}" class="form-control select2bs4" style="width: 100%;">
                 @foreach ($operators as $key => $value)
                     <option value="{{ $key }}"
-                        @if (isset($phone) ?? $key == $phone->operator)
+                        @if (isset($phone) && $key == $phone->operator)
                             selected="selected"
                         @endif
                     >{{ trans($value) }}</option>
