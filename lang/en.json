@@ -51,5 +51,6 @@
     "life": "Life",
     "city": "City",
     "images": "Images",
-    "image": "Image"
+    "image": "Image",
+    "google_map": "Google map"
 }

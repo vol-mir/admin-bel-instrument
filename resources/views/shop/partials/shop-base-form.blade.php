@@ -56,3 +56,12 @@
         </div>
     </div>
 </div>
+
+<div class="form-group">
+    <x-input-label for="google_map" :value="__('google_map')"/>
+    <x-text-input id="google_map" name="google_map" type="text"
+                  placeholder="{{ __('google_map') }}"
+                  :value="isset($shop) ? $shop->google_map : old('google_map')"
+                  autocomplete="google_map"/>
+    <x-input-error class="mt-2" :messages="$errors->get('google_map')"/>
+</div>

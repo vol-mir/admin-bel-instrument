@@ -51,5 +51,6 @@
     "life": "Life",
     "city": "Город",
     "images": "Изображения",
-    "image": "Изображение"
+    "image": "Изображение",
+    "google_map": "Google карта"
 }

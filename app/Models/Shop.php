@@ -23,6 +23,7 @@ use Illuminate\Support\Carbon;
  * @property mixed $physical_address
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @property string $google_map
  *
  * @method static Builder|Shop newModelQuery()
  * @method static Builder|Shop newQuery()
@@ -83,6 +84,7 @@ class Shop extends Model
         'youtube',
         'description',
         'keys',
+        'google_map',
     ];
 
     public function phones(): MorphMany

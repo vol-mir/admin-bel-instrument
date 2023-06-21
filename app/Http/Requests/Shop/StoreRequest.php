@@ -31,6 +31,7 @@ class StoreRequest extends FormRequest
             'youtube' => ['nullable', 'url'],
             'description' => ['nullable', 'string'],
             'keys' => ['nullable', 'string'],
+            'google_map' => ['nullable', 'url'],
         ];
     }
 }

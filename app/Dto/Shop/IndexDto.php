@@ -31,4 +31,6 @@ class IndexDto extends DataTransferObject
     public ?string $description = null;
 
     public ?string $keys = null;
+
+    public ?string $google_map = null;
 }
