@@ -2,8 +2,6 @@ import Lang from 'laravel-localization';
 import route from './route';
 import $ from 'jquery';
 import * as helper from "./helper";
-import Base64 from "admin-lte/plugins/jszip/jszip";
-import {pathImageShops} from "./helper";
 
 /**
  * Table Shops

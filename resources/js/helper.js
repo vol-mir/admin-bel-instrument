@@ -23,7 +23,6 @@ export function deleteEntity(url, table) {
 export let cropper = null;
 export function initCropper(image) {
     cropper = new Cropper(image, {
-        aspectRatio: 16 / 9,
         viewMode: 3,
         preview: '.cropper-preview'
     });
@@ -33,3 +32,4 @@ export function initCropper(image) {
  * Path images
  */
 export let pathImageShops = '/storage/images/shops/';
+export let pathImageBrands = '/storage/images/brands/';

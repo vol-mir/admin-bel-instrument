@@ -14,3 +14,4 @@ import './global';
 import './lang';
 import './shops';
 import './phones';
+import './brands';

@@ -52,5 +52,8 @@
     "city": "City",
     "images": "Images",
     "image": "Image",
-    "google_map": "Google map"
+    "google_map": "Google map",
+    "brands": "Brands",
+    "brand": "Brand",
+    "url": "Url"
 }

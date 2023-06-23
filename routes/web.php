@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PhoneController;
 use App\Http\Controllers\ProfileController;
@@ -45,4 +46,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('shops/{shop}/images/{image}', [ShopImageController::class, 'edit'])->name('shops.images.edit');
     Route::patch('shops/{shop}/images/{image}', [ShopImageController::class, 'update'])->name('shops.images.update');
     Route::delete('shops/images/{image}', [ShopImageController::class, 'destroy'])->name('shops.images.destroy');
+
+    Route::get('brands', [BrandController::class, 'index'])->name('brands.index');
+    Route::get('brands/create', [BrandController::class, 'create'])->name('brands.create');
+    Route::post('brands', [BrandController::class, 'store'])->name('brands.store');
+    Route::get('brands/{brand}', [BrandController::class, 'edit'])->name('brands.edit');
+    Route::patch('brands/{brand}', [BrandController::class, 'update'])->name('brands.update');
+    Route::delete('brands/{brand}', [BrandController::class, 'destroy'])->name('brands.destroy');
 });

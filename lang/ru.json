@@ -52,5 +52,8 @@
     "city": "Город",
     "images": "Изображения",
     "image": "Изображение",
-    "google_map": "Google карта"
+    "google_map": "Google карта",
+    "brands": "Бренды",
+    "brand": "Бренд",
+    "url": "Ссылка"
 }
