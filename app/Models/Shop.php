@@ -24,6 +24,7 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string $google_map
+ * @property string $email
  *
  * @method static Builder|Shop newModelQuery()
  * @method static Builder|Shop newQuery()
@@ -85,6 +86,7 @@ class Shop extends Model
         'description',
         'keys',
         'google_map',
+        'email',
     ];
 
     public function phones(): MorphMany

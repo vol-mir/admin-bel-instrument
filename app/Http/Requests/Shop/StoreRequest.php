@@ -32,6 +32,7 @@ class StoreRequest extends FormRequest
             'description' => ['nullable', 'string'],
             'keys' => ['nullable', 'string'],
             'google_map' => ['nullable', 'url'],
+            'email' => ['nullable', 'email'],
         ];
     }
 }

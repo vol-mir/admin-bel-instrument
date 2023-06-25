@@ -58,6 +58,14 @@
 </div>
 
 <div class="form-group">
+    <x-input-label for="email" :value="__('email')"/>
+    <x-text-input id="email" name="email" type="text" placeholder="{{ __('email') }}"
+                  :value="isset($shop) ? $shop->email : old('email')"
+                  autocomplete="email"/>
+    <x-input-error class="mt-2" :messages="$errors->get('email')"/>
+</div>
+
+<div class="form-group">
     <x-input-label for="google_map" :value="__('google_map')"/>
     <x-text-input id="google_map" name="google_map" type="text"
                   placeholder="{{ __('google_map') }}"

@@ -29,6 +29,7 @@ use Illuminate\Support\Carbon;
  * @property string|null $keys
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @property int $view_count
  *
  * @method static Builder|Setting newModelQuery()
  * @method static Builder|Setting newQuery()
@@ -72,6 +73,7 @@ class Setting extends Model
         'youtube',
         'description',
         'keys',
+        'view_count'
     ];
 
     public function phones(): MorphMany

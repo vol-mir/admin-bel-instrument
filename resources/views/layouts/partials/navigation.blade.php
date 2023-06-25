@@ -11,6 +11,9 @@
         <li class="nav-item d-none d-sm-inline-block">
             <a href="{{ route('profile.edit') }}" class="nav-link">{{ __('profile') }}</a>
         </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="https://bel-instrument.by/" class="nav-link">bel-instrument.by</a>
+        </li>
     </ul>
 
     <!-- Right navbar links -->
