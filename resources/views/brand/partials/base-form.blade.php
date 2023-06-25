@@ -1,4 +1,12 @@
 <div class="form-group">
+    <x-input-label for="title" :value="__('title')"/>
+    <x-text-input id="title" name="title" type="text" placeholder="{{ __('title') }}"
+                  :value="isset($brand) ? $brand->title : old('title')" autofocus
+                  autocomplete="name"/>
+    <x-input-error class="mt-2" :messages="$errors->get('title')"/>
+</div>
+
+<div class="form-group">
     <x-input-label for="description" :value="__('description')"/>
     <x-textarea-input id="description" name="description"
                       placeholder="{{ __('description') }}"

@@ -17,6 +17,7 @@ class StoreRequest extends FormRequest
             'description' => ['nullable', 'string'],
             'image' => ['required', 'string'],
             'url' => ['nullable', 'url'],
+            'title' => ['required', 'string'],
         ];
     }
 }

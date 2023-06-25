@@ -37,7 +37,7 @@
                                 <tr>
                                     <th></th>
                                     <th></th>
-                                    <th>{{ __('description') }}</th>
+                                    <th>{{ __('title') }}</th>
                                     <th></th>
                                 </tr>
                                 </thead>
@@ -47,7 +47,7 @@
                                 <tr>
                                     <th></th>
                                     <th></th>
-                                    <th>{{ __('description') }}</th>
+                                    <th>{{ __('title') }}</th>
                                     <th></th>
                                 </tr>
                                 </tfoot>

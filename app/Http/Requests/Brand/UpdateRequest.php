@@ -17,6 +17,7 @@ class UpdateRequest extends FormRequest
             'description' => ['nullable', 'string'],
             'image' => ['nullable', 'string'],
             'url' => ['nullable', 'url'],
+            'title' => ['required', 'string'],
         ];
     }
 }

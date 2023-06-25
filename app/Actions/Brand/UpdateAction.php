@@ -32,13 +32,19 @@ class UpdateAction
 
             $updateData = array_merge($updateData, [
                 'name' => $imageName,
+                'slug' => Str::slug($dto->title),
+                'title' => $dto->title,
             ]);
 
             return Brand::create($updateData);
         }
 
         if (array_key_exists('description', $updateData) && !empty($updateData['description'])) {
-            $brand->update(['description' => $updateData['description']]);
+            $brand->update([
+                'description' => $updateData['description'],
+                'slug' => Str::slug($dto->title),
+                'title' => $dto->title,
+            ]);
         }
 
         return $brand;

@@ -13,4 +13,6 @@ class IndexDto extends DataTransferObject
     public ?string $image = null;
 
     public ?string $url = null;
+
+    public string $title;
 }

@@ -55,5 +55,6 @@
     "google_map": "Google map",
     "brands": "Brands",
     "brand": "Brand",
-    "url": "Url"
+    "url": "Url",
+    "title": "Title"
 }

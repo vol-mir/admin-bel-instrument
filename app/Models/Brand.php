@@ -15,6 +15,8 @@ use Illuminate\Support\Carbon;
  *
  * @property int $id
  * @property string|null $name
+ * @property string $slug
+ * @property string $title
  * @property string $description
  * @property string $url
  * @property Carbon|null $created_at
@@ -40,5 +42,7 @@ class Brand extends Model
         'name',
         'description',
         'url',
+        'title',
+        'slug',
     ];
 }

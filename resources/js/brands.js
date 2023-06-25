@@ -26,7 +26,7 @@ let tableBrands = $('#datatable-brands').DataTable({
                 return '<img src="' + helper.pathImageBrands + '/' + row.name + '" class="img-size-220">';
             }
         },
-        {data: 'description', name: 'description'},
+        {data: 'title', name: 'title'},
         {
             data: 'id',
             name: 'actions',

@@ -29,6 +29,7 @@ class StoreAction
         $data = $dto->toArray();
         $data = array_merge($data, [
             'name' => $imageName,
+            'slug' => Str::slug($dto->title),
         ]);
 
         return Brand::create($data);
