@@ -22,6 +22,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('categories.index') }}" class="nav-link {{ (request()->is('categories')) ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>
+                            {{ __('categories') }}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('brands.index') }}" class="nav-link {{ (request()->is('brands')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-bacon"></i>
                         <p>

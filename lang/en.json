@@ -56,5 +56,8 @@
     "brands": "Brands",
     "brand": "Brand",
     "url": "Url",
-    "title": "Title"
+    "title": "Title",
+    "categories": "Categories",
+    "parent": "Parent",
+    "category": "Category"
 }

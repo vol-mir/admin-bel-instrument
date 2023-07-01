@@ -13,7 +13,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ route('brands.index') }}">{{ __('shops') }}</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('brands.index') }}">{{ __('brands') }}</a></li>
                         <li class="breadcrumb-item active">{{ __('edit') . ' ' . mb_strtolower(__('brand')) }}</li>
                     </ol>
                 </div><!-- /.col -->

@@ -10,6 +10,7 @@ Lang.addMessages({
         "mts": "MTS",
         "life": "Life",
         "city": "City",
+        "select2": "Select an item",
     },
     'ru': {
         'edit': 'Изменить',
@@ -20,6 +21,7 @@ Lang.addMessages({
         "mts": "МТС",
         "life": "Life",
         "city": "Город",
+        "select2": "Выберите пункт",
     },
 });
 

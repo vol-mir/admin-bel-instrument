@@ -10,8 +10,9 @@ import'admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js';
 import'admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js';
 import'admin-lte/plugins/select2/js/select2.full.min.js';
 
-import './global';
 import './lang';
+import './global';
 import './shops';
 import './phones';
 import './brands';
+import './categories';
