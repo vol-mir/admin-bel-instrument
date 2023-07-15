@@ -33,3 +33,5 @@ export function initCropper(image) {
  */
 export let pathImageShops = '/storage/images/shops/';
 export let pathImageBrands = '/storage/images/brands/';
+
+export let pathImageProducts= '/storage/images/products/';

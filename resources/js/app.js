@@ -16,3 +16,4 @@ import './shops';
 import './phones';
 import './brands';
 import './categories';
+import './products';

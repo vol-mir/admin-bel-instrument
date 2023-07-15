@@ -59,5 +59,8 @@
     "title": "Title",
     "categories": "Categories",
     "parent": "Parent",
-    "category": "Category"
+    "category": "Category",
+    "products": "Products",
+    "product": "Product",
+    "sku": "Sku"
 }

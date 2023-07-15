@@ -30,6 +30,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('products.index') }}" class="nav-link {{ (request()->is('products')) ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-paste"></i>
+                        <p>
+                            {{ __('products') }}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('brands.index') }}" class="nav-link {{ (request()->is('brands')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-bacon"></i>
                         <p>
